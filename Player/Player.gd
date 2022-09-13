@@ -13,8 +13,8 @@ func _physics_process(delta):
 	velocity = velocity.normalized() * clamp(velocity.length(), 0, maxSpeed)
 	if Input.is_action_pressed("Forward"):
 		velocity = velocity + Vector2(0, -acceleration).rotated(rotation) 
-	if Input.is_action_pressed("Down"):
-		velocity = velocity + Vector2(0, +acceleration).rotated(rotation)
+#	if Input.is_action_pressed("Down"):
+#		velocity = velocity + Vector2(0, +acceleration).rotated(rotation)
 	if Input.is_action_pressed("Left"):
 		rotation_degrees = rotation_degrees - rotationSpeed
 	if Input.is_action_pressed("Right"):
